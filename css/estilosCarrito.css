@@ -1,0 +1,96 @@
+@font-face {
+    font-family: bakery;
+    src: url("BakerieSmooth.otf");
+}
+
+.seccion {
+    display: block;
+    margin-right: 10px;
+    border-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
+
+}
+
+.seccion:hover {
+    transform: scale(1.1, 1.1);
+    transition: 500ms;
+}
+
+
+
+.nombre {
+    font-weight: bold;
+}
+
+#salida {
+    align-items: center;
+    width: 1000px;
+    margin: auto;
+}
+
+#mostrar {
+    width: 150px;
+    height: 100px;
+    background-color: cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.exterior-carrito {
+    background-color: #e8ccd7;
+    margin-top: 150px;
+}
+
+
+.encabezado-tienda {
+    font-family: bakery;
+}
+
+
+.btn {
+    background-color: #bfadb9;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #f3d9bA;
+}
+
+#agregar-al-carrito {
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+#realizar-pedido {
+    margin-top: 10px;
+}
+
+#resumen {
+
+    padding-top: 10px;
+    margin-top: 15px;
+    background-color: pink;
+
+
+
+}
+
+#div-cuotas {
+    display: none;
+    text-align: center;
+
+}
+
+#formulario-carrito {
+    display: none;
+
+}
+
+#tabla-articulos {
+    display: none;
+
+}

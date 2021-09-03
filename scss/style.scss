@@ -1,0 +1,284 @@
+@import 'fonts';
+@import 'colors';
+
+h3 {
+	font-family: $font-titulos;
+	font-size: 40px;
+}
+
+p {
+	font-family: $font-parrafos;
+}
+
+.menu {
+
+	list-style: none;
+	padding: 15px;
+	font-family: $font-titulos;
+	font-size: 25px;
+	background-color: whitesmoke;
+
+	.logo-menu {
+		img {
+			height: 100%;
+			width: 75%;
+		}
+
+	}
+
+	.menu-lista {
+		align-items: center;
+	}
+
+}
+
+.quienes-somos {
+	background-color: $colorPrincipal;
+
+	.portada {
+		width: 45%;
+		height: 45%;
+		margin-top: 125px;
+		margin-left: 50px;
+	}
+
+	.quienes-somos-parrafo {
+		font-family: $font-parrafos;
+		margin-top: 150px;
+		margin-left: 50px;
+		text-align: justify;
+		padding: 30px;
+
+		.quienes-somos-nombre-sitio {
+			font-weight: bolder;
+		}
+	}
+
+}
+
+
+.como-trabajamos {
+	padding: 20px;
+	margin: 30px;
+
+	.como-trabajamos-titulo {
+		margin-top: 100px;
+	}
+
+	.como-trabajamos-carousel {
+		background-color: $colorPrincipal;
+		padding-top: 100px;
+
+		.carousel {
+			width: 600px;
+			height: 700px;
+		}
+
+		.carousel-item {
+			p {
+				font-weight: bolder;
+				font-size: 25px;
+			}
+		}
+	}
+
+
+}
+
+.como-trabajamos-mobile {
+	display: none;
+}
+
+
+
+.FAQ {
+	padding: 120px 20px 20px 20px;
+	margin: 20px;
+
+	div {
+		background-color: $colorPrincipal;
+	}
+}
+
+
+
+
+
+
+
+footer {
+	margin-top: 70px;
+
+	.contacto {
+
+		.btn {
+			background-color: $colorBotones;
+			border: none;
+
+			&:hover {
+				background-color: $colorBotonesHover;
+			}
+		}
+
+	}
+}
+
+.redes {
+	.instagram {
+		padding: 5px;
+
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+
+	.whattsapp {
+		padding: 5px;
+
+		&:hover {
+			transform: scale(1.15);
+		}
+	}
+}
+
+
+
+.tienda {
+	background-color: $colorPrincipal;
+
+	.encabezado-tienda {
+		margin-top: 120px;
+	}
+
+	.texto-tienda {
+		text-align: justify;
+	}
+
+	.productos {
+		margin-top: 50px;
+
+		.item-articulo {
+			.imagen-articulo {
+				width: 350px;
+				height: 350px;
+				transition: all 0.5s;
+
+				&:hover {
+					width: 360px;
+					height: 360px;
+
+				}
+			}
+
+			p {
+				text-align: center;
+
+				.precio {
+					font-weight: bolder;
+				}
+			}
+
+		}
+	}
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 415px) {
+
+	.quienes-somos {
+
+		.portada {
+			display: none;
+		}
+
+		.quienes-somos-parrafo {
+			margin-top: 125px;
+			margin-left: 0px;
+			text-align: justify;
+			padding: 0px;
+			font-size: 14px;
+
+			.parrafo-pantalla-grande {
+				display: none;
+			}
+
+		}
+	}
+
+	.como-trabajamos {
+		.como-trabajamos-titulo {
+			margin-top: 50px;
+			margin-bottom: 0px;
+		}
+
+		.como-trabajamos-carousel {
+			display: none;
+		}
+	}
+
+	.como-trabajamos-mobile {
+
+		display: block;
+
+		p {
+			margin: 5px 6px 5px 6px;
+		}
+
+		.como-trabajamos-mobile-pasos {
+
+			p {
+				font-weight: bolder;
+				text-align: center;
+			}
+		}
+
+	}
+
+
+
+	.tienda {
+		background-color: white;
+	}
+
+	.menu-footer {
+		display: none;
+	}
+
+}
+
+/* Tablet Style */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+	.quienes-somos {
+		.quienes-somos-parrafo {
+			margin-top: 125px;
+			margin-left: 0px;
+			text-align: justify;
+			padding: 0px;
+			font-size: 12px;
+		}
+
+		.portada {
+			margin-top: 150px;
+		}
+	}
+
+}
+
+/* Laptop Style */
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+	.quienes-somos {
+		.quienes-somos-parrafo {
+			margin-top: 125px;
+			margin-left: 10px;
+			text-align: justify;
+			padding: 0px;
+			font-size: 15px;
+		}
+
+		.portada {
+			margin-top: 115px;
+		}
+	}
+
+}
