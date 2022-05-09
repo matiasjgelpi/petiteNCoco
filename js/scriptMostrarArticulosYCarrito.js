@@ -1,43 +1,36 @@
-
 $(document).ready(function () {
-    let articulos = []
+  let articulos = [];
 
-
-$.ajax({
-    type: 'GET',
-    url: '.json/articulos.json',
-    dataType: 'json',
+  $.ajax({
+    type: "GET",
+    url: "https://apimocha.com/petite/products",
+    dataType: "json",
 
     success: (res) => {
-        articulos = res
-        mostrarArticulos(articulos)
-        manejarCarrito(articulos)
-        
-      },
+      articulos = res;
+      mostrarArticulos(articulos);
+      manejarCarrito(articulos);
+    },
 
-      error: (error) => {
-        alert("no se obtuvieron los articulos");
-        console.log(error)
-    }
-   
-})
+    error: (error) => {
+      alert("no se obtuvieron los articulos");
+      console.log(error);
+    },
+  });
 
-
-const mostrarArticulos = (arrayArticulos) => {
-
-    arrayArticulos.forEach(art => {
-
-    $("#mostrar-productos").append(`
+  const mostrarArticulos = (arrayArticulos) => {
+    arrayArticulos.forEach((art) => {
+      $("#mostrar-productos").append(`
                                     <div class="col-md-6 col-lg-4 col-12 item-articulo">
                                         <img class="imagen-articulo" src=${art.imagen} alt="">
                                         <p>${art.descripcion}<span class="precio">Precio ${art.precio}</span></p>
                                         <button id="agregar-al-carrito-${art.id}" class="btnAgregarAlCarrito btn btn-light col-12" value="${art.id}">Agregar al carrito</button>
                                     </div>
-                                  `)
-});
-}
+                                  `);
+    });
+  };
 
-const mostrarModalCarrito = () => {
+  const mostrarModalCarrito = () => {
     $("#modal").append(`
                        <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
                           <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -109,11 +102,8 @@ const mostrarModalCarrito = () => {
                                        </div>
                              </div>
                            </div>
-                        </div> `)
+                        </div> `);
+  };
 
-}
-
-
-
-mostrarModalCarrito()
-})
+  mostrarModalCarrito();
+});
